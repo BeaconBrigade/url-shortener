@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Url Shortener</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/static/style.css">
-    </head>
-    <body>
-        <h1>Url Shortener</h1>
-        <p>This is a simple project to perform url shortening.</p>
 
-        <form action="/create" method="POST">
-            <input type="url" name="url" placeholder="https://example.com" required>
-            <input type="submit" value="Create Quick Link">
-        </form>
-    </body>
+<head>
+    <title>Url Shortener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/index.js"></script>
+</head>
+
+<body>
+    <h1>Url Shortener</h1>
+    <p>This is a simple project to perform url shortening.</p>
+
+    <form action="/create" method="POST" id="create">
+        <input type="url" name="url" placeholder="https://example.com" required>
+        <div>
+            <label for="date">Expires</label><input type="datetime-local" id="date" name="expire" required>
+        </div>
+        <input type="submit" value="Create Quick Link">
+    </form>
+</body>
+
 </html>
-
